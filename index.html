@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="ca">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap Grid</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="../2/Css/main.css">
+  </head>
+  <body>
+
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+
+    <a class="navbar-brand fw-bold" href="#">Pokémons</a>
+
+    <button class="navbar-toggler" type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav gap-3 fw-bold">
+
+        <li class="nav-item">
+          <a class="nav-link" active rounded px-3 href="#">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link rounded px-3"
+             aria-current="page"
+             href="../2/pagines/Pikachu.html">Pikachu</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link rounded px-3"
+             href="../2/pagines/Charmander.html">Charmander</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link rounded px-3"
+             href="../2/pagines/Squirtle.html">Squirtle</a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-interval="1500">
+  <div class="carousel-inner">
+    
+
+    <div class="carousel-item active">
+      <img src="../2/imgs/pik-carrousel.jpg" class="d-block w-100" alt="Pikachu">
+    </div>
+
+    <div class="carousel-item">
+      <img src="../2/imgs/char-banner.jpg" class="d-block w-100" alt="Charmander">
+    </div>
+    
+
+    <div class="carousel-item">
+      <img src="../2/imgs/squir-banner.jpg" class="d-block w-100" alt="Squirtle">
+    </div>
+    
+  </div>
+
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+
+
+
+    <div class="container">
+      <header class="bg-primary text-white text-center p-3 mt-2">
+        <h1>Benvinguts al meu disseny primer amb Bootstrap</h1>
+      </header>
+
+      <main class="row my-3">
+        <div class="col-12 col-md-6 col-lg-4 p-3">
+          <div class="bg-light p-3 text-center h-100">
+            <h2>Pikachu</h2>
+            <p>rata elèctrica groga</p>
+            <img
+              src="imgs/pikachu.jpg"
+              class="img-fluid"
+              style="height: 370px"
+            />
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 p-3">
+          <div class="bg-light p-3 text-center h-100">
+            <h2>charmander</h2>
+            <p>drac inofensiu i bonic</p>
+            <img
+              src="imgs/charmander.jpg"
+              class="img-fluid"
+              style="height: 370px"
+            />
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 p-3">
+          <div class="bg-light p-3 text-center h-100">
+            <h2>squirtle</h2>
+            <p>la tortuga més guai que hi ha</p>
+            <img
+              src="imgs/squirtle.jpg"
+              class="img-fluid"
+              style="height: 370px"
+            />
+          </div>
+        </div>
+      </main>
+
+      <footer class="bg-primary text-white text-center p-3 mb-2">
+        <p class="mb-0">© 2025 Institut Barres i Ones</p>
+      </footer>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
