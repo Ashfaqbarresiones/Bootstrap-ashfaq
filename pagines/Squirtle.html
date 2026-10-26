@@ -7,12 +7,102 @@
   <title>Squirtle - Pokémons</title>
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    .navbar .nav-link:hover {
+      background-color: #cff4fc;
+    }
+  </style>
 </head>
 <body>
 
+
+<div class="modal fade" id="cookieModal" tabindex="-1"
+     aria-labelledby="cookieModalLabel" aria-hidden="true"
+     data-bs-backdrop="static" data-bs-keyboard="false">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content text-center">
+
+      <div class="modal-header border-0">
+        <h5 class="modal-title fw-bold w-100" id="cookieModalLabel">
+          🍪 Feed the Pokémons!
+        </h5>
+      </div>
+
+      <div class="modal-body">
+        <p class="fs-5">Do you want to feed COOKIES to Pokémons?</p>
+        <div class="fs-1">🐭🍪⚡</div>
+      </div>
+
+      <div class="modal-footer border-0 justify-content-center">
+        <button type="button" class="btn btn-danger"
+                id="rejectCookies">
+          Reject
+        </button>
+        <button type="button" class="btn btn-success"
+                id="acceptCookies">
+          Accept
+        </button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="resultModal" tabindex="-1"
+     aria-labelledby="resultModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content text-center">
+      <div class="modal-body p-5">
+        <div class="fs-1 mb-3" id="resultEmoji">🍪</div>
+        <h4 class="fw-bold" id="resultModalLabel"></h4>
+        <button type="button" class="btn btn-primary mt-3"
+                data-bs-dismiss="modal">
+          OK
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  const cookieModal = new bootstrap.Modal(
+    document.getElementById('cookieModal')
+  );
+
+  const resultModal = new bootstrap.Modal(
+    document.getElementById('resultModal')
+  );
+
+  cookieModal.show();
+
+  document.getElementById('rejectCookies').addEventListener('click', function () {
+    document.getElementById('resultModalLabel').textContent =
+      'Now they will starve 😭';
+
+    document.getElementById('resultEmoji').textContent = '🥺🍪';
+
+    cookieModal.hide();
+    resultModal.show();
+  });
+
+  document.getElementById('acceptCookies').addEventListener('click', function () {
+    document.getElementById('resultModalLabel').textContent =
+      'Thank you for feeding the Pokémons! 💖';
+
+    document.getElementById('resultEmoji').textContent = '🎉🍪⚡';
+
+    cookieModal.hide();
+    resultModal.show();
+  });
+</script>
+
+
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand fw-bold" href="../../index.html">Pokémons</a>
+    <a class="navbar-brand fw-bold" href="../index.html">Pokémons</a>
 
     <button class="navbar-toggler" type="button"
       data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -21,80 +111,66 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav gap-3 fw-bold">
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav gap-3 fw-bold mx-auto">
         <li class="nav-item">
           <a class="nav-link" href="../index.html">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link rounded px-3" href="../pagines/Pikachu.html">Pikachu</a>
+          <a class="nav-link rounded px-3" href="Pikachu.html">Pikachu</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link rounded px-3" href="../pagines/Charmander.html">Charmander</a>
+          <a class="nav-link rounded px-3" href="Charmander.html">Charmander</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active rounded px-3" aria-current="page"
-             href="/pagines/Squirtle.html">Squirtle</a>
+          <a class="nav-link active rounded px-3" aria-current="page" href="Squirtle.html">Squirtle</a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
 
-<div class="container my-5">
-  <div class="row justify-content-center">
-    <div class="col-md-6 col-lg-5">
+<div class="container-fluid my-4 px-3 px-md-4">
+  <div class="row">
+    <div class="col-12 col-sm-8 col-md-5 col-lg-4 col-xl-3">
       <div class="card shadow-sm">
         <img
           src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png"
-          class="card-img-top p-4"
+          class="card-img-top p-3"
           alt="Squirtle"
-          style="max-height: 320px; object-fit: contain;">
+          style="height: 220px; object-fit: contain;">
 
         <div class="card-body">
-          <h2 class="card-title text-center fw-bold">Squirtle</h2>
-          <p class="text-center text-muted">Núm. 007 · Tipus: Aigua</p>
+          <h4 class="card-title text-center fw-bold">Squirtle</h4>
+          <p class="text-center text-muted mb-2">Núm. 007</p>
+
+          <div class="text-center mb-3">
+            <span class="badge text-bg-primary">Aigua</span>
+          </div>
 
           <p class="card-text">
-            Squirtle és un Pokémon de tipus aigua. Utilitza el seu
+            Squirtle és un Pokémon de tipus aigua. Utilitza la seva
             closca per protegir-se i pot llançar aigua per la boca.
           </p>
 
-          <h5 class="fw-bold">Estadístiques base</h5>
+          <h6 class="fw-bold">Estadístiques base</h6>
 
-          <div class="d-flex justify-content-between border-bottom py-2">
-            <span>HP</span><strong>44</strong>
-          </div>
-          <div class="d-flex justify-content-between border-bottom py-2">
-            <span>Atac</span><strong>48</strong>
-          </div>
-          <div class="d-flex justify-content-between border-bottom py-2">
-            <span>Defensa</span><strong>65</strong>
-          </div>
-          <div class="d-flex justify-content-between border-bottom py-2">
-            <span>Atac especial</span><strong>50</strong>
-          </div>
-          <div class="d-flex justify-content-between border-bottom py-2">
-            <span>Defensa especial</span><strong>64</strong>
-          </div>
-          <div class="d-flex justify-content-between py-2">
-            <span>Velocitat</span><strong>43</strong>
-          </div>
-
-          <div class="text-center mt-3">
-            <span class="badge text-bg-primary">Aigua</span>
-          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item d-flex justify-content-between px-0">HP <strong>44</strong></li>
+            <li class="list-group-item d-flex justify-content-between px-0">Atac <strong>48</strong></li>
+            <li class="list-group-item d-flex justify-content-between px-0">Defensa <strong>65</strong></li>
+            <li class="list-group-item d-flex justify-content-between px-0">Atac especial <strong>50</strong></li>
+            <li class="list-group-item d-flex justify-content-between px-0">Defensa especial <strong>64</strong></li>
+            <li class="list-group-item d-flex justify-content-between px-0">Velocitat <strong>43</strong></li>
+          </ul>
         </div>
       </div>
     </div>
+
+    <div class="col-12 col-md-7 col-lg-8 col-xl-9">
+    </div>
   </div>
 </div>
-
-<style>
-  .navbar .nav-link:hover {
-    background-color: #cff4fc;
-  }
-</style>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
