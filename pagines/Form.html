@@ -24,31 +24,33 @@
   </style>
 </head>
 
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand fw-bold" href="../index.html">Home</a>
-  </nav>
 <body>
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold" href="../index.html">Home</a>
+    </div>
+  </nav>
 
   <div class="container mt-5">
     <div class="pokemon-container mx-auto p-4 p-md-5 shadow">
       <h2 class="text-center fw-bold mb-2">Aconsegueix el teu Pokémon!</h2>
       <p class="text-center text-light mb-4">Omple el formulari i tria el teu company d'aventures!</p>
 
-      <form>
+      <form id="formulari" onsubmit="cridaSubmit(event)">
         <div class="mb-3">
           <label for="nom" class="form-label">El teu nom</label>
-          <input type="text" class="form-control" id="nom" placeholder="Escriu el teu nom" required>
+          <input type="text" class="form-control" id="nom" name="nom" placeholder="Escriu el teu nom" required>
         </div>
 
         <div class="mb-3">
           <label for="email" class="form-label">Correu electrònic</label>
-          <input type="email" class="form-control" id="email" placeholder="exemple@gmail.com" required>
+          <input type="email" class="form-control" id="email" name="email" placeholder="exemple@gmail.com" required>
         </div>
 
         <div class="mb-4">
           <label for="pokemon" class="form-label">Tria el teu Pokémon</label>
-          <select class="form-select" id="pokemon" required>
+          <select class="form-select" id="pokemon" name="pokemon" required>
             <option value="" selected disabled>Selecciona un Pokémon</option>
             <option value="Pikachu">Pikachu ⚡</option>
             <option value="Charmander">Charmander 🔥</option>
@@ -63,8 +65,19 @@
     </div>
   </div>
 
+  <script>
+    function cridaSubmit(event) {
+      event.preventDefault();
+
+      const formulari = document.getElementById("formulari");
+      const nom = formulari.elements["nom"].value;
+      const pokemon = formulari.elements["pokemon"].value;
+
+      alert("Hola " + nom + "! Has escollit " + pokemon + "!");
+    }
+  </script>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
-```
