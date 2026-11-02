@@ -1,37 +1,70 @@
-
 <!doctype html>
 <html lang="ca">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>El meu Pokémon</title>
-
+  <title>Aconsegueix el teu Pokémon!</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #eaf4ff;
+    }
+
+    .pokemon-container {
+      background-color: #102b50;
+      color: white;
+      max-width: 550px;
+      border-radius: 18px;
+    }
+
+    .form-control, .form-select {
+      padding: 12px;
+    }
+  </style>
 </head>
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand fw-bold" href="../index.html">Home</a>
+  </nav>
 <body>
 
-<div class="container mt-5">
-  <h2>Aconsegueix el teu Pokémon!</h2>
+  <div class="container mt-5">
+    <div class="pokemon-container mx-auto p-4 p-md-5 shadow">
+      <h2 class="text-center fw-bold mb-2">Aconsegueix el teu Pokémon!</h2>
+      <p class="text-center text-light mb-4">Omple el formulari i tria el teu company d'aventures!</p>
 
-  <form>
-    <div class="mb-3">
-      <label for="nom" class="form-label">El teu nom</label>
-      <input type="text" class="form-control" id="nom" placeholder="Escriu el teu nom">
+      <form>
+        <div class="mb-3">
+          <label for="nom" class="form-label">El teu nom</label>
+          <input type="text" class="form-control" id="nom" placeholder="Escriu el teu nom" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="email" class="form-label">Correu electrònic</label>
+          <input type="email" class="form-control" id="email" placeholder="exemple@gmail.com" required>
+        </div>
+
+        <div class="mb-4">
+          <label for="pokemon" class="form-label">Tria el teu Pokémon</label>
+          <select class="form-select" id="pokemon" required>
+            <option value="" selected disabled>Selecciona un Pokémon</option>
+            <option value="Pikachu">Pikachu ⚡</option>
+            <option value="Charmander">Charmander 🔥</option>
+            <option value="Squirtle">Squirtle 💧</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn-warning fw-bold w-100 py-2">
+          Aconsegueix el teu Pokémon!
+        </button>
+      </form>
     </div>
+  </div>
 
-    <div class="mb-3">
-      <label for="pokemon" class="form-label">Tria el teu Pokémon</label>
-      <select class="form-select" id="pokemon">
-        <option>Pikachu</option>
-        <option>Charmander</option>
-        <option>Squirtle</option>
-      </select>
-    </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
-    <button type="submit" class="btn btn-warning">Aconsegueix-lo!</button>
-  </form>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+```
