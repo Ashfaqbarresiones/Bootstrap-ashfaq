@@ -1,3 +1,4 @@
+```html
 <!doctype html>
 <html lang="ca">
 <head>
@@ -37,7 +38,7 @@
       <h2 class="text-center fw-bold mb-2">Aconsegueix el teu Pokémon!</h2>
       <p class="text-center text-light mb-4">Omple el formulari i tria el teu company d'aventures!</p>
 
-      <form id="formulari" onsubmit="cridaSubmit(event)">
+      <form id="formulari" onsubmit="cridaSubmit1(event)">
         <div class="mb-3">
           <label for="nom" class="form-label">El teu nom</label>
           <input type="text" class="form-control" id="nom" name="nom" placeholder="Escriu el teu nom" required>
@@ -58,6 +59,11 @@
           </select>
         </div>
 
+        <div class="mb-5">
+          <label for="date" class="form-label">Data de naixament</label><br>
+          <input type="date" id="naixament" name="naixament" required max="2026-11-03">
+        </div>
+
         <button type="submit" class="btn btn-warning fw-bold w-100 py-2">
           Aconsegueix el teu Pokémon!
         </button>
@@ -65,19 +71,58 @@
     </div>
   </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
   <script>
-    function cridaSubmit(event) {
+    function cridaSubmit1(event) {
       event.preventDefault();
 
-      const formulari = document.getElementById("formulari");
-      const nom = formulari.elements["nom"].value;
-      const pokemon = formulari.elements["pokemon"].value;
+      // dades des del formulari
 
-      alert("Hola " + nom + "! Has escollit " + pokemon + "!");
+      const formulari = document.getElementById("formulari");
+      let nom = formulari.elements["nom"].value;
+      let pokemon = formulari.elements["pokemon"].value;
+      let naixament = formulari.elements["naixament"].value;
+
+      // separant la data de naixament
+
+      if (!naixament) return;
+      const [anyNaix, mesNaix, diaNaix] = naixament.split('-').map(Number);
+
+      const avui = new Date();
+
+      const diaActual = avui.getDate();
+      const mesActual = avui.getMonth() + 1;
+      const anyActual = avui.getFullYear();
+
+      // l'edat
+
+      let edat = anyActual - anyNaix;
+
+
+      if (mesActual < mesNaix || (mesActual === mesNaix && diaActual < diaNaix)) {
+        edat--;
+      }
+
+      // si té 18 anys avui
+
+      const compleixavui = (anyActual - anyNaix === 18) && (mesActual === mesNaix) && (diaActual === diaNaix);
+
+      // FINAL
+
+      if (compleixavui) {
+        alert("Felicitats! " + nom + " avui fas 18 anys i has escollit el pokémon" + pokemon )
+      }
+      else if (edat >= 18) {
+        alert("Ja tens 18 anys, el teu pokemon " + pokemon + " està en camí")
+      }
+      else{
+        alert("oops! encara no ets menor d'edat tens " + edat + " anys, torna més endavant")
+      }
+
     }
   </script>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-
 </body>
 </html>
+```
