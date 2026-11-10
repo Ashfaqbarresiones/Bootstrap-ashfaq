@@ -1,161 +1,182 @@
+
 <!doctype html>
 <html lang="ca">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Bootstrap Grid</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-    />
-    <link rel="stylesheet" href="../2/Css/main.css">
-  </head>
-  <body>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Css/main.css">
+</head>
+
+<body>
 
 
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
+    <div class="container-fluid">
 
-    <a class="navbar-brand fw-bold" href="#">Pokémons</a>
+        <a class="navbar-brand fw-bold" href="index.html">Pokémons</a>
 
-    <button class="navbar-toggler" type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarNav"
-      aria-controls="navbarNav"
-      aria-expanded="false"
-      aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+        <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
 
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav gap-3 fw-bold">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-        <li class="nav-item">
-          <a class="nav-link" active rounded px-3 href="#">Home</a>
-        </li>
+        <div class="collapse navbar-collapse" id="navbarNav">
 
-        <li class="nav-item">
-          <a class="nav-link rounded px-3"
-             aria-current="page"
-             href="../2/pagines/Pikachu.html">Pikachu</a>
-        </li>
+            <ul class="navbar-nav gap-3 fw-bold">
 
-        <li class="nav-item">
-          <a class="nav-link rounded px-3"
-             href="../2/pagines/Charmander.html">Charmander</a>
-        </li>
+                <li class="nav-item">
+                    <a class="nav-link active rounded px-3" aria-current="page" href="index.html">Home</a>
+                </li>
 
-        <li class="nav-item">
-          <a class="nav-link rounded px-3"
-             href="../2/pagines/Squirtle.html">Squirtle</a>
-        </li>
+                <li class="nav-item">
+                    <a class="nav-link rounded px-3" href="pagines/Pikachu.html">Pikachu</a>
+                </li>
 
-      </ul>
-       <a href="../2/pagines/Form.html" class="btn btn-warning fw-bold ms-lg-auto mt-2 mt-lg-0">
-        Aconsegueix el teu Pokémon!
-      </a>
+                <li class="nav-item">
+                    <a class="nav-link rounded px-3" href="pagines/Charmander.html">Charmander</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link rounded px-3" href="pagines/Squirtle.html">Squirtle</a>
+                </li>
+
+            </ul>
+
+            <a href="pagines/Form.html" class="btn btn-warning fw-bold ms-lg-auto mt-2 mt-lg-0">
+                Aconsegueix el teu Pokémon!
+            </a>
+
+            <a href="pagines/Login.html" class="btn p-1 m-2">
+                <img src="imgs/login.jpg" alt="Log in" class="login-img">
+            </a>
+
+        </div>
     </div>
-  </div>
 </nav>
 
 
+<div id="carouselExampleAutoplaying" class="carousel slide"
+    data-bs-ride="carousel" data-bs-interval="1500">
 
-<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-interval="1500">
-  <div class="carousel-inner">
-    
+    <div class="carousel-inner">
 
-    <div class="carousel-item active">
-      <img src="../2/imgs/pik-carrousel.jpg" class="d-block w-100" alt="Pikachu">
+        <div class="carousel-item active">
+            <img src="imgs/pik-carrousel.jpg" class="d-block w-100" alt="Pikachu">
+        </div>
+
+        <div class="carousel-item">
+            <img src="imgs/char-banner.jpg" class="d-block w-100" alt="Charmander">
+        </div>
+
+        <div class="carousel-item">
+            <img src="imgs/squir-banner.jpg" class="d-block w-100" alt="Squirtle">
+        </div>
+
     </div>
 
-    <div class="carousel-item">
-      <img src="../2/imgs/char-banner.jpg" class="d-block w-100" alt="Charmander">
-    </div>
-    
+    <button class="carousel-control-prev" type="button"
+        data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
 
-    <div class="carousel-item">
-      <img src="../2/imgs/squir-banner.jpg" class="d-block w-100" alt="Squirtle">
-    </div>
-    
-  </div>
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
 
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
+    </button>
+
+    <button class="carousel-control-next" type="button"
+        data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+
+    </button>
 </div>
+
 
 <div class="container-fluid mt-4 mb-5">
-  <div class="bg-info-subtle rounded-2 shadow-sm p-5 w-100">
-    <h3 class="fw-bold mx-auto">Els Pokémon més genials!</h3>
-    <p class="mb-0">
-Descobreix Pokémon increïbles amb poders i habilitats úniques.  
-Des de Pikachu amb els seus atacs elèctrics fins a Charmander i Squirtle, cadascun té el seu propi estil.  
-Tria el teu preferit i comença la teva aventura Pokémon!
-    </p>
-  </div>
+
+    <div class="pokemon-description rounded-2 shadow-sm p-5 w-100">
+
+        <h3 class="fw-bold">Els Pokémon més genials!</h3>
+
+        <p class="mb-0">
+            Descobreix Pokémon increïbles amb poders i habilitats úniques.
+            Des de Pikachu amb els seus atacs elèctrics fins a Charmander
+            i Squirtle, cadascun té el seu propi estil.
+            Tria el teu preferit i comença la teva aventura Pokémon!
+        </p>
+
+    </div>
 </div>
 
-    <div class="container">
-      <header class="bg-primary text-white text-center p-3 mt-2">
+
+<div class="container">
+
+    <header class="bg-primary text-white text-center p-3 mt-2">
         <h1>TOP 3 POKÉMONS</h1>
-      </header>
+    </header>
 
-      <main class="row my-3">
-        <div class="col-12 col-md-6 col-lg-4 p-3">
-          <div class="bg-light p-3 text-center h-100">
-            <h2>Pikachu</h2>
-            <p>rata elèctrica groga</p>
-            <img
-              src="imgs/pikachu.jpg"
-              class="img-fluid"
-              style="height: 370px"
-            />
-          </div>
-        </div>
+    <main class="row my-3">
 
         <div class="col-12 col-md-6 col-lg-4 p-3">
-          <div class="bg-light p-3 text-center h-100">
-            <h2>charmander</h2>
-            <p>drac inofensiu i bonic</p>
-            <img
-              src="imgs/charmander.jpg"
-              class="img-fluid"
-              style="height: 370px"
-            />
-          </div>
+
+            <div class="bg-light p-3 text-center h-100">
+
+                <h2>Pikachu</h2>
+                <p>Rata elèctrica groga</p>
+
+                <img src="imgs/pikachu.jpg" class="img-fluid pokemon-img" alt="Pikachu">
+
+            </div>
         </div>
+
 
         <div class="col-12 col-md-6 col-lg-4 p-3">
-          <div class="bg-light p-3 text-center h-100">
-            <h2>squirtle</h2>
-            <p>la tortuga més guai que hi ha</p>
-            <img
-              src="imgs/squirtle.jpg"
-              class="img-fluid"
-              style="height: 370px"
-            />
-          </div>
-        </div>
-      </main>
 
-      <footer class="bg-primary text-white text-center p-3 mb-2 img-fluid">
+            <div class="bg-light p-3 text-center h-100">
+
+                <h2>Charmander</h2>
+                <p>Drac inofensiu i bonic</p>
+
+                <img src="imgs/charmander.jpg" class="img-fluid pokemon-img" alt="Charmander">
+
+            </div>
+        </div>
+
+
+        <div class="col-12 col-md-6 col-lg-4 p-3">
+
+            <div class="bg-light p-3 text-center h-100">
+
+                <h2>Squirtle</h2>
+                <p>La tortuga més guai que hi ha</p>
+
+                <img src="imgs/squirtle.jpg" class="img-fluid pokemon-img" alt="Squirtle">
+
+            </div>
+        </div>
+
+    </main>
+
+
+    <footer class="bg-primary text-white text-center p-3 mb-2">
+
         <p class="mb-0">© 2025 Institut Barres i Ones</p>
-      </footer>
-    </div>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-      crossorigin="anonymous"
-    ></script>
+    </footer>
+
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
-</html>
-
-  </body>
 </html>
