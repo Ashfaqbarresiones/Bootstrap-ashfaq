@@ -1,0 +1,126 @@
+body {
+    background-color: #071a35;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background-color: #061329;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.text-yellow {
+    color: #ffc107;
+}
+
+.pokemon-container {
+    background-color: #10294a;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+}
+
+.form-section-title {
+    color: #ffc107;
+}
+
+.form-label {
+    color: white;
+    font-weight: 500;
+}
+
+.form-control,
+.form-select {
+    background-color: #f1f4f8;
+    border: 1px solid #ced4da;
+    border-radius: 9px;
+    padding: 11px 13px;
+}
+
+.form-control:focus,
+.form-select:focus {
+    background-color: white;
+    border-color: #ffc107;
+    box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.2);
+}
+
+.form-control.is-invalid,
+.form-select.is-invalid {
+    border: 2px solid #dc3545;
+    background-image: none;
+}
+
+.form-control.is-valid,
+.form-select.is-valid {
+    border: 2px solid #198754;
+    background-image: none;
+}
+
+.form-check-input {
+    cursor: pointer;
+}
+
+.form-check-input:checked {
+    background-color: #ffc107;
+    border-color: #ffc107;
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    border: none;
+    color: #17202a;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+.btn-warning:hover {
+    background-color: #e0a800;
+    transform: translateY(-2px);
+}
+
+.profile-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.avatar {
+    width: 135px;
+    height: 135px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+    border: 4px solid #ffc107;
+    background-color: #071a35;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.profile-message {
+    background-color: #071a35;
+    border: 1px solid rgba(255, 193, 7, 0.3);
+}
+
+footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.invalid-feedback {
+    color: #ff6b75;
+}
+
+@media (max-width: 768px) {
+    .display-5 {
+        font-size: 2rem;
+    }
+
+    .pokemon-container {
+        padding: 24px !important;
+    }
+}

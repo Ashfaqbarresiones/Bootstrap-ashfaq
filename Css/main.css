@@ -67,6 +67,8 @@ footer {
 
 
 /* FORM PAGE */
+
+
 .form-page {
     background-color: #eaf4ff;
 }
@@ -82,3 +84,47 @@ footer {
 .pokemon-container .form-select {
     padding: 12px;
 }
+
+
+.form-section-title {
+    color: #f5c542;
+    font-weight: 700;
+    border-left: 4px solid #f5c542;
+    padding-left: 12px;
+}
+
+.profile-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-icon {
+    width: 125px;
+    height: 125px;
+    margin: auto;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #f5c542;
+    box-shadow: 0 0 20px rgba(245, 197, 66, 0.2);
+}
+
+.profile-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-message {
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(245, 197, 66, 0.3);
+}
+
+.form-page .navbar {
+    background: #101b35;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.form-page footer {
+    background: #101b35;
+}
+
