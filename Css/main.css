@@ -1,73 +1,160 @@
-
-/* GENERAL */
-body {
-    background-color: #f8f9fa;
+:root {
+    --bg: #f4f6f9;
+    --nav: #071a35;
+    --line: #dde2e8;
+    --accent: #ffc107;
+    --text: #17202a;
+    --muted: #5c6773;
 }
 
-/* NAVBAR */
-.navbar .nav-link {
-    border-radius: 8px;
+body:not(.form-page) {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: Arial, sans-serif;
+}
+
+body:not(.form-page) .navbar {
+    background-color: var(--nav) !important;
+    --bs-navbar-color: rgba(255, 255, 255, 0.75);
+    --bs-navbar-hover-color: var(--accent);
+    --bs-navbar-active-color: var(--accent);
+    --bs-navbar-brand-color: white;
+    --bs-navbar-brand-hover-color: var(--accent);
+    --bs-navbar-toggler-border-color: rgba(255, 255, 255, 0.3);
+}
+
+body:not(.form-page) .navbar-toggler-icon {
+    filter: invert(1);
+}
+
+body:not(.form-page) .navbar .nav-link {
+    border-radius: 4px;
     padding-left: 12px;
     padding-right: 12px;
 }
 
-.navbar .nav-link:hover {
-    background-color: #cff4fc;
+body:not(.form-page) .navbar .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.08);
 }
 
-/* LOGIN IMAGE */
+body:not(.form-page) .btn-warning {
+    background-color: var(--accent);
+    border: none;
+    color: var(--text);
+    border-radius: 4px;
+}
+
+body:not(.form-page) .btn-warning:hover {
+    background-color: #e0a800;
+}
+
 .login-img {
     max-height: 40px;
     object-fit: contain;
-    border: 2px solid #ffc107;
-    border-radius: 9px;
+    border: 2px solid var(--accent);
+    border-radius: 4px;
 }
 
-/* HOMEPAGE CAROUSEL */
 .carousel img {
     width: 100%;
     height: 400px;
     object-fit: cover;
 }
 
-/* HOMEPAGE DESCRIPTION */
 .pokemon-description {
-    background-color: #e0f7fa;
+    background-color: white !important;
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--accent);
+    border-radius: 4px !important;
+    box-shadow: none !important;
 }
 
-/* TOP 3 POKEMON */
+.pokemon-description p {
+    color: var(--muted);
+}
+
+header.bg-primary {
+    background-color: transparent !important;
+    border-bottom: 1px solid var(--line);
+}
+
+header.text-white {
+    color: var(--nav) !important;
+}
+
+header h1 {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+main .bg-light {
+    background-color: white !important;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+}
+
+main .bg-light:hover {
+    border-color: var(--accent);
+}
+
+main .bg-light p {
+    color: var(--muted);
+}
+
 .pokemon-img {
     height: 370px;
     width: 100%;
     object-fit: contain;
 }
 
-/* POKEMON DETAIL CARDS */
+.section-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    border-left: 4px solid var(--accent);
+    padding-left: 12px;
+}
+
+.info-box {
+    background-color: white;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+}
+
+.info-box p {
+    color: var(--muted);
+}
+
+.step-number {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--accent);
+}
+
+.card {
+    --bs-card-bg: white;
+    --bs-card-border-color: var(--line);
+    border-radius: 6px;
+    box-shadow: none !important;
+}
+
 .pokemon-detail-img {
     max-height: 320px;
     width: 100%;
     object-fit: contain;
 }
 
-/* FOOTER */
 footer {
     margin-top: 20px;
+    border-top: 1px solid var(--line);
 }
 
-/* SMALL SCREENS */
-@media (max-width: 576px) {
-    .carousel img {
-        height: 220px;
-    }
-
-    .pokemon-img {
-        height: 280px;
-    }
+footer.bg-primary {
+    background-color: transparent !important;
 }
 
-
-/* FORM PAGE */
-
+footer.text-white {
+    color: var(--muted) !important;
+}
 
 .form-page {
     background-color: #eaf4ff;
@@ -85,38 +172,11 @@ footer {
     padding: 12px;
 }
 
-
 .form-section-title {
     color: #f5c542;
     font-weight: 700;
     border-left: 4px solid #f5c542;
     padding-left: 12px;
-}
-
-.profile-card {
-    display: flex;
-    flex-direction: column;
-}
-
-.profile-icon {
-    width: 125px;
-    height: 125px;
-    margin: auto;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 4px solid #f5c542;
-    box-shadow: 0 0 20px rgba(245, 197, 66, 0.2);
-}
-
-.profile-icon img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.profile-message {
-    background: rgba(0, 0, 0, 0.2);
-    border: 1px solid rgba(245, 197, 66, 0.3);
 }
 
 .form-page .navbar {
@@ -128,3 +188,12 @@ footer {
     background: #101b35;
 }
 
+@media (max-width: 576px) {
+    .carousel img {
+        height: 220px;
+    }
+
+    .pokemon-img {
+        height: 280px;
+    }
+}
