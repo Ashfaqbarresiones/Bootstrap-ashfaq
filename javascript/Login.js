@@ -1,4 +1,3 @@
-
 const formulari = document.getElementById("formulari");
 
 const dni = document.getElementById("DNI");
